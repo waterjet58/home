@@ -1,0 +1,8 @@
+1) Flesh out Create.php
+    a) Needs to be able to cycle through possible layouts
+    b) Pick a valid lot
+    c) Once a selection of a lot and layout is made bring to customize screen
+    d) Customize options
+    e) Save to Database as an array and .png
+
+2) Link Users to the Floor plan database

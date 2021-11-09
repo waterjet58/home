@@ -1,0 +1,382 @@
+/* Master Styles*/
+body {
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Navigation Styles*/
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+    background-color: rgb(24, 23, 23);
+}
+
+.left-side {
+    display: flex;
+}
+
+.right-side {
+    display: flex;
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav-text-user {
+    display: flex;
+    font-size: 24px;
+    color: rgb(163, 162, 162);
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.nav-wrapper > .right-side > div 
+{
+    margin-left: 30px;
+}
+
+.nav-wrapper > .left-side > div {
+    margin-right: 30px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+    height: 26px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid white;
+}
+
+.nav-link-wrapper a:hover {
+    color:white;
+}
+
+/*Content Styles*/
+.content-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.content-item-wrapper {
+    position: relative;
+}
+
+.content-img-background {
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.img-text-wrapper .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    font-size: 24px;
+    color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    font-size: 24px;
+    color: lightseagreen;
+}
+
+.img-darken { 
+    transition: 1s;
+    filter: brightness(30%);
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+}
+
+section .imageBox {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+
+section .profileImageBox {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+
+/* section .imageBox:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg, #e91e63,#03a9f4);
+    z-index: 1;
+    mix-blend-mode: screen;
+} */
+
+section .imageBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section .loginBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+section .loginBox .formBox h2 {
+    color: black;
+    font-weight: 600;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
+    letter-spacing: 1px;
+
+}
+
+section .loginBox .formBox .inputBox {
+    margin-bottom: 20px;
+}
+
+section .loginBox .formBox .inputBox span {
+    font-size: 24px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: black;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+section .loginBox .formBox .inputBox input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid black;
+    background: transparent;
+    font-size: 20px;
+    border-radius: 35px;
+}
+
+section .loginBox .formBox .inputBox input[type = "submit"] {
+    background: black;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+section .loginBox .formBox .inputBox input[type = "submit"]:hover {
+    background: rgb(70, 66, 66);
+}
+
+section .loginBox .formBox .remember {
+    font-size: 24px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: black;
+    font-weight: 300;
+}
+
+section .loginBox .formBox .wrong {
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: red;
+    font-weight: 600;
+ }
+
+section .loginBox .formBox .inputBox p {
+    font-size: 20px;
+    margin-bottom: 1px;
+    display: inline-block;
+    color: black;
+    font-weight: 400;
+}
+
+section .signUpBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200%;
+    height: 75%;
+}
+
+section .signUpBox .formBox h2 {
+    color: black;
+    font-weight: 600;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
+    letter-spacing: 1px;
+
+}
+
+section .signUpBox .formBox .inputBox {
+    margin-bottom: 20px;
+}
+
+section .signUpBox .formBox .inputBox span {
+    font-size: 24px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: black;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+section .signUpBox .formBox .inputBox input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid black;
+    background: transparent;
+    font-size: 20px;
+    border-radius: 35px;
+}
+
+section .signUpBox .formBox .inputBox input[type = "submit"] {
+    background: black;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+section .signUpBox .formBox .inputBox input[type = "submit"]:hover {
+    background: rgb(70, 66, 66);
+}
+
+section .signUpBox .formBox .inputBox p {
+    font-size: 20px;
+    margin-bottom: 1px;
+    display: inline-block;
+    color: black;
+    font-weight: 400;
+}
+
+section .signUpBox .formBox .wrong
+{
+    font-size: 20px;
+    margin-bottom: 1px;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    color: red;
+    font-weight: 600;
+}
+
+section .profileBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 75%;
+}
+
+section .profileBox .formBox h2 {
+    color: black;
+    font-weight: 600;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
+    letter-spacing: 1px;
+
+}
+
+section .profileBox .formBox .profile-Text {
+    color: black;
+    font-weight: 400;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+section .profileBox .formBox .inputBox input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid black;
+    background: transparent;
+    font-size: 20px;
+    border-radius: 35px;
+}
+
+section .profileBox .formBox .inputBox input[type = "submit"] {
+    background: rgb(245, 3, 3);
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+section .profileBox .formBox .inputBox input[type = "submit"]:hover {
+    background: rgb(160, 31, 31);
+}
+
+.toolbar-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.toolbar-item {
+    margin-left: 1px;
+    margin-right: 1px;
+}
