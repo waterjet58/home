@@ -18,37 +18,14 @@ include_once 'header.php';
                 <div class="toolbar-item">ok</div>
                 <div class="toolbar-item">ok</div>
             </div>  
-            <canvas id="grid" width="400" height="400" style="border:1px solid #000000;"></canvas> 
+                <canvas id="grid" style="position: absolute; left: 0; top: 130; z-index: 0; border:1px solid #000000;"></canvas> 
+                <canvas id="rooms" width = 2500 height = 1200 style="position: absolute; left: 0; top: 130; z-index: 1; border:1px solid #000000;"></canvas> 
+                <script src = "drawGrid.js"></script>
+                <script src = "Room.js"></script>
+                <script src = "drawRooms.js"></script>
         </div>
     </body>
 
-    <script>
-            
-            var canvas = document.getElementById("grid");
-            var ctx = canvas.getContext('2d');
-
-            var drawGrid = function(w, h) {
-
-
-
-            ctx.canvas.width  = w;
-            ctx.canvas.height = h;
-
-            for (x=0;x<=w;x+=50) {
-                for (y=0;y<=h;y+=50) {
-                    ctx.moveTo(x, 0);
-                    ctx.lineTo(x, h);
-                    ctx.stroke();
-                    ctx.moveTo(0, y);
-                    ctx.lineTo(w, y);
-                    ctx.stroke();
-                }
-            }
-
-            };
-
-            drawGrid(1000, 1000);
-            
-        </script>  
+    
 
 </html>
