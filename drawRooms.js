@@ -1,18 +1,19 @@
 var canvas = document.getElementById("rooms");
 var ctx = canvas.getContext('2d');
-
+ 
 ctx.canvas.width = 2500;
 ctx.canvas.height = 1200;
 
 var mouseDown = false;
 var dragTarget = "none"
-var room1 = new Room(100, 100, 200, 300);
-var room2 = new Room(400, 400, 500, 300);
+//var room1 = new Room(100, 100, 200, 300);
+//var room2 = new Room(400, 400, 500, 300);
 var rooms = [];
-rooms.push(room1)
-rooms.push(room2)
+//rooms.push(room1)
+//rooms.push(room2)
 
 function drawRooms() {
+    console.log("what")
     for (i = 0; i < rooms.length; i++) {
         rooms[i].draw(ctx);
     }
@@ -36,11 +37,12 @@ curDelta = 0;
 
 function tick()
 {
+    console.log("huh")
     var now = Date.now();
     var deltaTime = now - lastUpdate;
     lastUpdate = now;
     curDelta = curDelta + deltaTime
-    
+    drawRooms();
 }
 
 canvas.onmousemove = function (e) {
@@ -56,8 +58,8 @@ canvas.onmousemove = function (e) {
     function handleRooms(e)
     {
         ctx.clearRect(0, 0, canvas.width, canvas.height); // for demo
-        drawRooms();
         
+
         var widthMin = 150
         var heightMin = 150
         var edgeSize
